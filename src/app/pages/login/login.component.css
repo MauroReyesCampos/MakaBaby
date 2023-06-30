@@ -12,7 +12,7 @@ img {
 }
 
 .form {
-    width: 85%;
+    width: 90%;
 }
 
 label {
@@ -30,4 +30,9 @@ input {
     background-color: #F3C7C4;
     color: #8C8874;
     font-weight: 700;
+}
+
+h6 {
+    color: #8C8874;
+    font-size: 12px;
 }
