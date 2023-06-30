@@ -1,0 +1,35 @@
+.main-section {
+    min-height: 100vh;
+}
+
+.menu-icon {
+    padding: 0 20px;
+    color: #8C8874;
+}
+
+.form {
+    width: 90%;
+}
+
+label {
+    color: #8C8874;
+}
+
+input, textarea, .form-select {
+    border-radius: 25px;
+    border: 2px solid #8C8874;
+    height: 40px;
+}
+
+.btn {
+    height: 50px;
+    border-radius: 25px;
+    background-color: #F3C7C4;
+    color: #8C8874;
+    font-weight: 700;
+}
+
+h6 {
+    color: #8C8874;
+    font-size: 12px;
+}

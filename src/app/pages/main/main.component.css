@@ -1,0 +1,21 @@
+.main-section {
+    min-height: 100vh;
+}
+
+.img-container {
+    opacity: 0.55;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    width: 100%;
+    min-height: 100%;
+}
+
+.menu-icon {
+    padding: 0 20px;
+    color: #8C8874;
+}
+
+h6 {
+    color: #8C8874;
+    font-size: 12px;
+}
