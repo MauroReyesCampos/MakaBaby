@@ -1,16 +1,10 @@
 .main-section {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-img {
-    width: 120px;
-    height: 120px;
-    color: #F3C7C4;
-    margin-bottom: 25px;
+.menu-icon {
+    padding: 0 20px;
+    color: #8C8874;
 }
 
 .form {
@@ -21,7 +15,7 @@ label {
     color: #8C8874;
 }
 
-input {
+input, textarea, .form-select {
     border-radius: 25px;
     border: 2px solid #8C8874;
     height: 40px;
