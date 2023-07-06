@@ -1,15 +1,15 @@
 <section class="main-section position-relative">
   <img src="../../../assets/images/Logo_app.png" alt="logo">
-  <form class="form" action="">
+  <form class="form"  (ngSubmit)="userLogin()" #loginForm="ngForm">
     <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Correo electrónico</label>
+      <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" name="userEmail" [(ngModel)]="userEmail" required>
+      <label for="floatingInputEmail">Correo electrónico</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="userPassword" [(ngModel)]="userPassword" required>
       <label for="floatingPassword">Contraseña</label>
     </div>
-    <button type="submit" class="btn w-100">INGRESAR</button>
+    <button type="submit" class="btn w-100" [disabled]="!loginForm.form.valid">INGRESAR</button>
   </form>
   <footer class="position-absolute bottom-0">
     <h6 class="text-center">&copy;2023 MÄKA Baby. Todos los derechos reservados</h6>
