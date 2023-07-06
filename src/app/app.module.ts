@@ -10,6 +10,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ClientsComponent } from './pages/clients/clients.component';
 import { NewclientComponent } from './pages/newclient/newclient.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PageService } from './services/page.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
