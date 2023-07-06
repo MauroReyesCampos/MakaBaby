@@ -1,26 +1,33 @@
 <section class="main-section position-relative">
-    <form class="form" action="">
+    <form class="form" (ngSubmit)="createUser()" #loginForm="ngForm">
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Nombre</label>
+        <input type="text" class="form-control" id="floatingInputFirstname" placeholder="name@example.com" name="firstName" [(ngModel)]="firstName" required>
+        <label for="floatingInputFirstname">Nombre</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Apellido</label>
+        <input type="text" class="form-control" id="floatingInputLastname" placeholder="name@example.com" name="lastName" [(ngModel)]="lastName" required>
+        <label for="floatingInputLastname">Apellido</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Correo electrónico</label>
+        <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" name="email" [(ngModel)]="email" required>
+        <label for="floatingInputEmail">Correo electrónico</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="password" required>
         <label for="floatingPassword">Contraseña</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Confirmar contraseña</label>
+        <input type="password" class="form-control" id="floatingConfirmpassword" placeholder="Password" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+        <label for="floatingConfirmpassword">Confirmar contraseña</label>
       </div>
-      <button type="submit" class="btn w-100">Crear</button>
+      <div class="form-floating mb-3">
+        <select class="form-select" id="floatingSelectRole" name="role" [(ngModel)]="role">
+          <option value="admin">Administrador</option>
+          <option value="user">Usuario</option>
+        </select>
+        <label for="floatingSelectRole">Rol</label>
+      </div>
+      <button type="submit" class="btn w-100" [disabled]="!loginForm.form.valid">CREAR</button>
     </form>
     <footer class="position-absolute bottom-0">
       <h6 class="text-center">&copy;2023 MÄKA Baby. Todos los derechos reservados</h6>
