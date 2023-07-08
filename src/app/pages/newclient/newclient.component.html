@@ -1,44 +1,44 @@
 <section class="main-section position-relative text-center mt-5 pt-4">
   <h1 class="pb-3">Nuevo cliente</h1>
   <div class="form-container d-flex justify-content-center">
-    <form action="" class="form">
+    <form class="form" (ngSubmit)="createClient()" #loginForm="ngForm">
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="clientName" [(ngModel)]="clientName" required>
         <label for="floatingInput">Nombre / Razón social</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"name="clientPersonalId" [(ngModel)]="clientPersonalId" required>
         <label for="floatingInput">CC / NIT</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="clientAdress1" [(ngModel)]="clientAdress1" required>
         <label for="floatingInput">Dirección 1</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="clientAdress2" [(ngModel)]="clientAdress2">
         <label for="floatingInput">Dirección 2</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="clientNeigborhood" [(ngModel)]="clientNeigborhood" required>
         <label for="floatingInput">Barrio</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="clientCity" [(ngModel)]="clientCity" required>
         <label for="floatingInput">Ciudad</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="clientState" [(ngModel)]="clientState" required>
         <label for="floatingInput">Departamento</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="clientPhone" [(ngModel)]="clientPhone" required>
         <label for="floatingInput">Teléfono</label>
       </div>
       <div class="form-floating mb-3">
-        <textarea type="text" class="form-control" id="floatingInput" placeholder="name@example.com" style="height: 100px"></textarea>
+        <textarea type="text" class="form-control" id="floatingInput" placeholder="name@example.com" style="height: 100px" name="clientObs" [(ngModel)]="clientObs" required></textarea>
         <label for="floatingInput">Observaciones</label>
       </div>
-      <button type="submit" class="btn w-100 mb-3">Guardar</button>
+      <button type="submit" class="btn w-100 mb-3" [disabled]="!loginForm.form.valid">GUARDAR</button>
     </form>
   </div>
   <footer>
